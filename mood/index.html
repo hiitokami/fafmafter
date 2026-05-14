@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAFM 情感语音对比平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            color: #1a202c;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #4a5568;
+            font-size: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 3px solid #3182ce;
+        }
+
+        .audio-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            transition: all 0.2s ease;
+        }
+
+        .audio-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .audio-name {
+            font-weight: 500;
+            color: #2d3748;
+            min-width: 200px;
+            word-break: break-all;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .tag-base {
+            background-color: #e53e3e;
+        }
+
+        .tag-fafm {
+            background-color: #38a169;
+        }
+
+        audio {
+            flex: 1;
+            min-width: 280px;
+            height: 40px;
+        }
+
+        .audio-text {
+            width: 100%;
+            margin-top: 0.8rem;
+            padding: 0.8rem;
+            background: #f7fafc;
+            border-radius: 6px;
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .audio-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            audio {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FAFM 情感语音对比平台</h1>
+        <p class="subtitle">不同情绪下合成语音与原始参考语音对比</p>
+    </header>
+
+    <!-- 悲伤情绪（Sad） -->
+    <div class="section-title">悲伤情绪（Sad）</div>
+
+    <div class="audio-card">
+        <span class="audio-name">0005.wav</span>
+        <span class="tag tag-fafm">generate</span>
+        <audio controls preload="none">
+            <source src="0005.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">sadbase_0005.wav</span>
+        <span class="tag tag-base">base</span>
+        <audio controls preload="none">
+            <source src="sadbase_0005.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+        <div class="audio-text">【其实喜欢一首歌很多时候并不是真的喜欢】</div>
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">0010.wav</span>
+        <span class="tag tag-fafm">generate</span>
+        <audio controls preload="none">
+            <source src="0010.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">sadbase_0010.wav</span>
+        <span class="tag tag-base">base</span>
+        <audio controls preload="none">
+            <source src="sadbase_0010.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+        <div class="audio-text">【她害怕又恐惧所以躲在陷阱里不敢出去】</div>
+    </div>
+
+    <!-- 开心情绪（Happy） -->
+    <div class="section-title">开心情绪（Happy）</div>
+
+    <div class="audio-card">
+        <span class="audio-name">0008.wav</span>
+        <span class="tag tag-fafm">generate</span>
+        <audio controls preload="none">
+            <source src="0008.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">happybase_0008.wav</span>
+        <span class="tag tag-base">base</span>
+        <audio controls preload="none">
+            <source src="happybase_0008.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+        <div class="audio-text">【招摇，你给我点了个赞呀，还没睡吗，你是寂寞了吧】</div>
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">0013.wav</span>
+        <span class="tag tag-fafm">generate</span>
+        <audio controls preload="none">
+            <source src="0013.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">happybase_0013.wav</span>
+        <span class="tag tag-base">base</span>
+        <audio controls preload="none">
+            <source src="happybase_0013.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+        <div class="audio-text">【hello，笨猫宝宝，欢迎笨猫哥哥进入直播间】</div>
+    </div>
+
+    <!-- 愤怒情绪（Anger） -->
+    <div class="section-title">愤怒情绪（Anger）</div>
+
+    <div class="audio-card">
+        <span class="audio-name">0002.wav</span>
+        <span class="tag tag-fafm">generate</span>
+        <audio controls preload="none">
+            <source src="0002.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">angerbase_0002.wav</span>
+        <span class="tag tag-base">base</span>
+        <audio controls preload="none">
+            <source src="angerbase_0002.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+        <div class="audio-text">【别碰我的剑你碰坏了赔不起】</div>
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">0044.wav</span>
+        <span class="tag tag-fafm">合成语音</span>
+        <audio controls preload="none">
+            <source src="0044.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+    </div>
+
+    <div class="audio-card">
+        <span class="audio-name">angerbase_0044.wav</span>
+        <span class="tag tag-base">原始参考</span>
+        <audio controls preload="none">
+            <source src="angerbase_0044.wav" type="audio/wav">
+            你的浏览器不支持音频播放，请更新浏览器或使用Chrome/Edge打开。
+        
+        <div class="audio-text">【我再等下去我永远都走不了了，我也想有我自己的事，我跟你们是一样的】</div>
+    </div>
+
+</body>
+</html>
